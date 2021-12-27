@@ -1,0 +1,20 @@
+
+#COMMAND TO START ZOO-KEEPKEEPER
+zookeeper-server-start.bat ../../config/zookeeper.properties
+
+
+#COMMAND TO START KAFKA SERVER
+kafka-server-start.bat ../../config/server.properties
+
+#COMMAND TO CREATE TOPIC
+kafka-topics.bat --create --topic myfriday --bootstrap-server localhost:9092
+
+
+#COMMAND TO SET PATH
+JAVA_HOME=/usr/lib/jvm/java-11-oracle/ bin/kafka-server-start.sh config/server.properties
+
+#COMMAND TO CREATE CONSUMER
+kafka-console-consumer.bat --topic topic-name --bootstrap-server localhost:9092
+
+#COMMAND TO CREATE PRODUCER
+kafka-console-producer.bat --topic topic-name --bootstrap-server localhost:9092
